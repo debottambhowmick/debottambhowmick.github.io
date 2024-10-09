@@ -1233,7 +1233,9 @@ body.light-theme .footer p{
         text-align: center;
         margin-left: 0;
     }
-
+    .hero-text h1{
+        size: 1.5rem;
+    }
     .btn-group {
         justify-content: center;
         gap: 10px;
