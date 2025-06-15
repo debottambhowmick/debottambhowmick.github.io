@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+<header>
+  <div class="wrapper-header">
+    <div class="header-left">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-d"></i>
+        <div class="logo-text">Debottam</div>
+      </a>
+    </div>
+    <div class="header-right">
+      <div class="toggle"><i class="fa-solid fa-sun"></i></div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="wrapper">
+    <section id="projects-page">
+      <h2 class="section-title">
+        <span class="text-highlight">All</span> Projects
+      </h2>
+      <p class="projects-intro">
+        Every project featured here is the outcome of countless hours of dedication,
+        problem-solving, and continuous improvement. From the first concept sketches
+        to the final lines of code, I have invested creative energy and technical
+        rigor to transform ideas into practical solutions. Whether designing scalable
+        data pipelines, developing user-centric interfaces, or optimizing performance
+        under demanding conditions, each repository embodies a commitment to excellence
+        and a passion for innovation. The journey behind these projects involved
+        late-night debugging sessions, collaborative feedback loops, and iterative
+        refinements to ensure robustness and usability. As you explore this collection,
+        you’ll discover how every application not only demonstrates core technical
+        competencies—such as full-stack development, data analysis, and automation—but
+        also reflects the persistence and attention to detail required to deliver
+        real-world impact. Each repository tells a story of growth and mastery,
+        highlighting the lessons learned and challenges overcome. Dive in to experience
+        the depth of dedication poured into every project.
+      </p>
+
+      <div class="project-grid">
+        <!-- Example project card: duplicate this block for each project -->
+        <div class="project-item">
+          <a href="https://github.com/your-repo-1" target="_blank">
+            <img
+              src="contents/projects/your-project-1.png"
+              alt="Project One"
+            />
+            <div class="project-info">
+              <h3>Project One</h3>
+              <p>A brief description of Project One.</p>
+            </div>
+          </a>
+        </div>
+        <!-- /project-item -->
+      </div>
+    </section>
+  </main>
+  <!-- contact -->
+   <section id="contact">
+        <div class="wrapper-contact">
+            <div class="contact-header">
+                <h2>Contact Me</h2>
+                <p>Below are the details to reach out to me!</p>
+            </div>
+    
+            <div class="Contact-main">
+                <div class="contact-div">
+                    <div class="contact-content">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <h3>Address</h3>
+                        <p>Kolkata, India</p>
+                    </div>
+                </div>
+                <!-- ----- -->
+                <div class="contact-div">
+                    <div class="contact-content">
+                        <div class="contact-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Discord Server</h3>
+                        <p><a href="https://discord.gg/mndtekpd9k">Join Discord</a></p>
+                    </div>
+                </div>
+    
+                <div class="contact-div">
+                    <div class="contact-content">
+                        <div class="contact-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3>Email Address</h3>
+                        <p><a href="mailto:debottambhowmick@gmail.com">Email Me</a></p>
+                    </div>
+                </div>
+    
+                <div class="contact-div">
+                    <div class="contact-content">
+                        <div class="contact-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Download Resume</h3>
+                        <p><a href="contents\resume\debottam_updated_resume_2024.pdf" download>Click here</a></p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="contact-footer">
+                <div class="contact-footer-row">
+                    <div class="footer-form">
+                        <h2>Have a <span>Question?</span></h2>
+                        <button class="contact-button"><a href="https://forms.gle/FbjBgpgHP35MTS9N9">click here</a></button>
+                    </div>
+                </div>
+    
+                <div class="contact-footer-row">
+                    <div class="contact-footer-text">
+                        <p>Find me on</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/debottambhowmick/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/debottambhowmick"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.hackerrank.com/profile/debottambhowmick"><i class="fab fa-hackerrank"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© 2024 Debottam Bhowmick. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Theme toggle
+      const themeToggle = document.querySelector('.toggle');
+      const icon = themeToggle.querySelector('i');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        icon.classList.toggle('fa-sun');
+        icon.classList.toggle('fa-moon');
+      });
+
+      // Scroll-to-top
+      const scrollBtn = document.getElementById('scroll-to-top');
+      const rootEl = document.documentElement;
+      function handleScroll() {
+        const scrollTotal = rootEl.scrollHeight - rootEl.clientHeight;
+        if (rootEl.scrollTop / scrollTotal > 0.1) {
+          scrollBtn.classList.add('show-btn');
+        } else {
+          scrollBtn.classList.remove('show-btn');
+        }
+      }
+      function scrollToTop() {
+        rootEl.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      document.addEventListener('scroll', handleScroll);
+      scrollBtn.addEventListener('click', scrollToTop);
+    });
+  </script>
+</body>
+</html>

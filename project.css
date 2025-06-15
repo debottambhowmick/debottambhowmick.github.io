@@ -1,0 +1,536 @@
+/* project.css */
+
+/* ========= VARIABLES ========= */
+:root {
+  --primary-color: #007ced;
+  --background-dark: #222;
+  --background-light: #fff;
+  --text-dark: #000;
+  --text-light: #c9c9c9;
+}
+
+/* ========= GLOBAL RESET ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background-dark);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+body.light-theme {
+  background: var(--background-light);
+  color: var(--text-dark);
+}
+
+/* ========= HEADER ========= */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--background-dark);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+body.light-theme header {
+  background: var(--background-light);
+}
+
+.wrapper-header {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; 
+}
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-light);
+}
+body.light-theme .logo .logo-text {
+    color: var(--text-dark);
+}
+
+/* dark/light toggle */
+.toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+body.light-theme .toggle {
+  color: var(--text-dark);
+}
+
+/* ========= MAIN WRAPPER ========= */
+.wrapper {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* ========= SECTION TITLE ========= */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.text-highlight {
+  color: var(--primary-color);
+}
+
+/* ========= INTRO PARAGRAPH ========= */
+.projects-intro {
+  max-width: 100%;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  text-align: center;
+}
+body.light-theme .projects-intro {
+  color: var(--text-dark);
+}
+
+/* ========= PROJECT GRID ========= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+
+}
+.project-grid a {
+  text-decoration: none; /* no underline */
+  color: inherit;        /* keep your existing text color */
+}
+/* Default dimmed border */
+.project-item {
+  background: var(--background-dark);
+  border: 2px solid #095093;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+
+}
+body.light-theme .project-item {
+  background: var(--background-light);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.project-item img {
+  width: 100%;
+  display: block;
+}
+.project-info {
+  padding: 1rem;
+}
+.project-info h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-light);
+}
+body.light-theme .project-info p {
+  color: var(--text-dark);
+}
+
+/* Glowing on hover */
+.project-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-color);
+}
+/* contact */
+#contact {
+    color: #fff;
+    padding-top: 5rem;
+    text-align: center;
+    padding-bottom: 12rem;
+}
+
+.wrapper-contact {
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.wrapper-contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.contact-header p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: var(--footer-lightgrey);
+}
+
+.Contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3.2rem;
+}
+
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.contact-content {
+    padding: 30px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content:hover {
+    transform: translateY(-10px);
+}
+
+.contact-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.1);
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 16px;
+    color: var(--footer-lightgrey);
+}
+.contact-content p a{
+    font-size: 16px;
+    color: var(--footer-lightgrey);
+}
+.contact-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+.contact-footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-footer-row h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+}
+.footer-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.footer-form .contact-button {
+    display: inline-block;
+    color: var(--primary-color);
+    background-color: transparent;
+    padding: 12px 25px;
+    border-radius: 20px;
+    border: 2px solid var(--text-light);
+    box-shadow: 0 10px 10px -8px rgba(0 0 0/78%);
+    position: relative;
+    transition: color 0.3s, border-color 0.3s;
+    overflow: hidden;
+    z-index: 1;
+}
+.footer-form .contact-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: var(--primary-color);
+    transition: all 0.8s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.footer-form .contact-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.footer-form .contact-button:hover {
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.footer-form .contact-button a{
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.contact-footer-text{
+    color: var(--footer-lightgrey);
+    font-size: 14px;
+}
+
+.contact-footer-row .social i {
+    color: var(--text-light);
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.contact-footer-row .social i:hover {
+    color: var(--primary-color);
+    transform: rotate(360deg);
+}
+/* light theme settings */
+body.light-theme .contact-footer-text{
+    color: var(--text-dark);
+}
+body.light-theme .footer-form .contact-button a{
+    color: var(--text-dark);
+}
+body.light-theme .contact-content p{
+    color: var(--text-dark);
+}
+body.light-theme .contact-content p a{
+    color: var(--text-dark);
+}
+body.light-theme .contact-icon{
+    background: rgb(43 34 34 / 10%);
+}
+
+body.light-theme .contact-header p{
+    color: var(--text-dark);
+}
+/* ========= FOOTER ========= */
+.footer {
+    padding: 1rem 10rem;
+    background-color: var(--footer-grey);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer-text p{
+    text-align: center;
+}
+
+body.light-theme .footer {
+    background-color: var(--footer-lightgrey);
+}
+
+body.light-theme .footer p{
+    color: var(--text-dark);
+}
+
+/* ========= SCROLL-TO-TOP BUTTON ========= */
+#scroll-to-top{
+    position: fixed;
+    display: none;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 20px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    z-index: 1000;
+    transition: none;
+}
+#scroll-to-top.show-btn {
+  display: block;
+}
+
+@media (max-width:930px) {
+        html, body {
+        overflow-x: hidden;
+       }
+    .header-left,
+    .header-right {
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+        text-align: left;
+        padding: 0 3px;
+    }
+    .header-left {
+        flex: 1;
+    }
+    .toggle{
+        margin-left: 0;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+    .header-right {
+        flex: 0; /* Make header-right smaller to fit better */
+        justify-content: flex-end;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo i {
+        font-size: 25px; 
+        height: 38px; 
+        width: 38px; 
+        padding: 7px;
+    }
+
+    .logo .logo-text {
+        font-size: 18px;
+    }
+    #contact {
+        padding-top: 3rem;
+        padding-bottom: 8rem;
+    }
+    #contact h2{
+        font-size: 2rem;
+    }
+    .contact-header p{
+        margin-bottom: 0;
+    }
+    .Contact-main {
+        padding: 2rem;
+    }
+
+    .contact-div {
+        flex: 1 1 100%;
+        max-width: 300px; 
+        margin: 20px auto;
+    }
+
+    .contact-content {
+        padding: 20px;
+    }
+
+    .contact-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    .contact-content h3 {
+        font-size: 16px;
+    }
+
+    .contact-content p {
+        font-size: 14px;
+    }
+
+    .contact-footer-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-form .contact-button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .footer-form .contact-button a {
+        font-size: 12px;
+    }
+
+    .contact-footer-row .social i {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+    #scroll-to-top {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        bottom: 20px;
+        right: 20px;
+        padding: 5px;
+    }
+    .footer {
+        padding: 1rem 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .footer-text p{
+        font-size: small;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        position: fixed;
+        width: 100%;
+        top: 15;
+        z-index: 1000;
+    }
+    #scroll-to-top {
+        bottom: 15px;
+        right: 20px;
+    }
+}
